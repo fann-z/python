@@ -1,0 +1,120 @@
+:root {
+    --primary-color: #1a237e;
+    --secondary-color: #283593;
+    --accent-color: #00bcd4;
+    --background-color: #f5f6fa;
+    --text-color: #2c3e50;
+    --card-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+}
+
+.main-container {
+    display: flex;
+    min-height: 100vh;
+    padding: 20px;
+    gap: 30px;
+}
+
+.content-area {
+    flex: 1;
+}
+
+.qr-area {
+    width: 300px;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+}
+
+.custom-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.custom-button {
+    background: linear-gradient(145deg, var(--accent-color), var(--primary-color));
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.file-list {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.file-item:hover {
+    background-color: rgba(0,0,0,0.02);
+    transform: translateX(5px);
+}
+
+.file-icon {
+    margin-right: 15px;
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.upload-zone {
+    border: 3px dashed var(--accent-color);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-zone:hover {
+    background-color: rgba(0,188,212,0.1);
+    transform: scale(1.01);
+}
+
+.upload-zone i {
+    font-size: 64px;
+    color: var(--accent-color);
+}
+
+.progress {
+    height: 8px;
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    min-width: 300px;
+    z-index: 1000;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
